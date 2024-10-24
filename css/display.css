@@ -1,0 +1,47 @@
+/* Base table styling */
+table {
+    width: 100%;
+    max-width: 38%; /* Prevents table from exceeding container width */
+    border-collapse: separate; /* Keeps borders separate to show double effect */
+    border-spacing: 2px; /* Adds spacing between borders for better visibility */
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px double black; /* Sets double border */
+    text-align: left;
+    padding: 8px;
+}
+
+img {
+    width: 80px;
+    height: auto;
+}
+
+/* Responsive styling for medium devices (tablets) */
+@media (max-width: 768px) {
+    table {
+        max-width: 80%; /* Expands the table width to 80% of the container */
+    }
+    th, td {
+        font-size: 14px; /* Reduces text size */
+        padding: 6px; /* Reduces padding */
+    }
+    img {
+        width: 60px; /* Reduces image size */
+    }
+}
+
+/* Responsive styling for small devices (phones) */
+@media (max-width: 480px) {
+    table {
+        max-width: 100%; /* Full width for smaller screens */
+    }
+    th, td {
+        font-size: 12px; /* Further decreases text size */
+        padding: 4px; /* Reduces padding */
+    }
+    img {
+        width: 50px; /* Shrinks image size for small devices */
+    }
+}

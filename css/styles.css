@@ -1,0 +1,83 @@
+body{
+    background-color: rgba(250, 235, 215, 0.97);
+}
+h2 {
+    font-size: medium;
+    color: peru;
+    margin: 5px auto; /* Center the element horizontally */
+    width: 40%; /* Adjust width to be more flexible */
+    font-weight: bold;
+    line-height: 40px;
+}
+
+.my-line {
+    width: 40%; /* Make line width responsive */
+    margin: 5px auto; /* Center the line horizontally with space above and below */
+    border: 1px solid lightskyblue; /* Defines the style of the line */
+}
+
+h1 {
+    margin: 5px auto; /* Add some margin to space it out */
+    line-height:25px;
+    text-align: center; /* Center the heading */
+    font-weight: normal;
+}
+
+p {
+    margin: 0 auto; /* Center the paragraphs horizontally */
+    width: 40%; /* Adjust width to make the text responsive */
+    font-weight: 500;
+    text-align: justify;
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* Center container horizontally */
+    align-items: center; /* Center content vertically */
+    margin: 25px auto; /* Center the container with margin */
+    border: 2px solid black;
+    border-radius: 100%; /* Make the container circular */
+    width: 180px; /* Size of the container */
+    height: 180px;
+    position: relative; /* Make container relative for positioning foreground image */
+}
+
+.my-background {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%; /* Make the image circular */
+}
+
+.my-foreground {
+    position: absolute;
+    width: 460px; /* Adjust size to fit over the background */
+    height: auto;
+    top: 13%; /* Adjust position */
+    left: 45%; /* Center horizontally */
+    transform: translate(-50%, -25%); /* Adjust alignment */
+}
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+    h2, p, .my-line {
+        width: 70%; /* Increase width on smaller screens */
+    }
+    h1{
+        width: 69%;
+    }
+    .container {
+        width: 130px;
+        height: 130px;
+    }
+
+    .my-background {
+        width: 130px;
+        height: 130px;
+    }
+
+    .my-foreground {
+        width: 333px;
+        top: 6%;
+        transform: translate(-50%, -20%);
+    }
+}

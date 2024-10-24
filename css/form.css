@@ -1,0 +1,149 @@
+body {
+    font-family: Serif;
+    background-color: #6d42f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Use min-height to avoid overflow issues on small screens */
+    margin: 0;
+    padding: 20px; /* Add some padding for mobile devices */
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%; /* Set width to 100% for smaller screens */
+    max-width: 750px; /* Use max-width for larger screens */
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    padding: 8px 20px;
+    box-sizing: border-box;
+}
+
+.column {
+    flex: 1 1 200px;
+    min-width: 200px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#left-column {
+    text-align: center;
+}
+
+#left-column h1 {
+    color: #6d42f4;
+    font-size: 26px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+
+#left-column p {
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+#left-column img {
+    max-width: 100%;
+    height: 200px;
+    width: 200px;
+}
+
+#right-column input[type="email"],
+#right-column input[type="text"],
+#right-column textarea {
+    width: 100%; /* Full width for mobile */
+    padding: 8px;
+    margin-top: 5px;
+    border: 2px solid #e0e0e0;
+    border-radius: 5px;
+    outline: none;
+    font-size: 14px;
+}
+
+#right-column input:focus,
+#right-column textarea:focus {
+    border-color: #7f57ff;
+}
+
+#right-column button {
+    background-color: #7f57ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 15px;
+    border-radius: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    width: 45%; /* Make button full width on small screens */
+}
+
+#right-column button:hover {
+    background-color: #6d42f4;
+}
+
+#right-column label {
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: bold;
+}
+
+#right-column p {
+    font-size: 14px;
+    color: #7f57ff;
+    margin-top: 5px;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column; /* Stack columns vertically */
+        padding: 20px;
+    }
+
+    #left-column img {
+        height: auto; /* Adjust image height for smaller screens */
+        width: 150px; /* Slightly reduce image size for smaller devices */
+    }
+
+    #right-column input[type="email"],
+    #right-column input[type="text"],
+    #right-column textarea {
+        font-size: 16px; /* Increase font size for readability on small screens */
+    }
+
+    #right-column button {
+        font-size: 16px; /* Larger button text */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .row {
+        padding: 15px;
+    }
+
+    #left-column img {
+        width: 100px; /* Smaller image on mobile */
+    }
+
+    #right-column label {
+        font-size: 14px;
+    }
+
+    #right-column input[type="email"],
+    #right-column input[type="text"],
+    #right-column textarea {
+        font-size: 14px;
+    }
+
+    #right-column button {
+        padding: 8px 15px;
+    }
+}
+
